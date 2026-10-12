@@ -6,7 +6,7 @@ const SITES = [
   {
     name: 'Hero Details',
     description: 'Cooperative dice-and-deckbuilder browser game.',
-    href: 'https://prod.matthewbulkley.com',
+    href: 'https://herodetails.matthewbulkley.com',
     icon: '⚔️',
     accent: '#e8862c',
   },
