@@ -46,6 +46,13 @@ const GAMES = [
     icon: '🔎',
     accent: '#c084fc',
   },
+  {
+    name: 'Twogether',
+    description: '2-player co-op puzzle platformer - one keyboard, two players.',
+    href: 'https://twogether.matthewbulkley.com',
+    icon: '🤝',
+    accent: '#e63946',
+  },
 ]
 
 function SiteCard({ site }) {
