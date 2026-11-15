@@ -1,21 +1,19 @@
 import './App.css'
 
-// ClueTations' URL is a placeholder until it actually has a deployed home -
-// see the project's own README for where it ends up.
-const SITES = [
-  {
-    name: 'Hero Details',
-    description: 'Cooperative dice-and-deckbuilder browser game.',
-    href: 'https://herodetails.matthewbulkley.com',
-    icon: '⚔️',
-    accent: '#e8862c',
-  },
+const WEBSITES = [
   {
     name: 'Castle Creek Lodge',
     description: 'Our rental property.',
     href: 'https://castlecreeklodge.com',
     icon: '🏔️',
     accent: '#4fa37a',
+  },
+  {
+    name: 'Big Chair River House',
+    description: 'Our rental property.',
+    href: 'https://bigchairriverhouse.com/',
+    icon: '🏡',
+    accent: '#3fa7a0',
   },
   {
     name: 'Boulder Ridge POA',
@@ -31,9 +29,19 @@ const SITES = [
     icon: '🛠️',
     accent: '#d4a72c',
   },
+]
+
+const GAMES = [
+  {
+    name: 'Hero Details',
+    description: 'Cooperative dice-and-deckbuilder browser game.',
+    href: 'https://herodetails.matthewbulkley.com',
+    icon: '⚔️',
+    accent: '#e8862c',
+  },
   {
     name: 'ClueTations',
-    description: 'Crack the cipher, guess the quote. (In progress)',
+    description: 'Crack the cipher, guess the quote.',
     href: 'https://cluetations.matthewbulkley.com',
     icon: '🔎',
     accent: '#c084fc',
@@ -57,6 +65,19 @@ function SiteCard({ site }) {
   )
 }
 
+function Section({ title, sites }) {
+  return (
+    <section className="dashboard-section">
+      <h2 className="dashboard-section-title">{title}</h2>
+      <div className="site-grid">
+        {sites.map((site) => (
+          <SiteCard key={site.name} site={site} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function App() {
   return (
     <main className="dashboard">
@@ -65,11 +86,8 @@ function App() {
         <p>A few of the things I've built.</p>
       </header>
 
-      <div className="site-grid">
-        {SITES.map((site) => (
-          <SiteCard key={site.name} site={site} />
-        ))}
-      </div>
+      <Section title="My Websites" sites={WEBSITES} />
+      <Section title="Games" sites={GAMES} />
     </main>
   )
 }
