@@ -1,3 +1,7 @@
+import { useState } from 'react'
+import AccountWidget from './components/AccountWidget'
+import LoginModal from './components/LoginModal'
+import useAccount from './hooks/useAccount'
 import './App.css'
 
 const WEBSITES = [
@@ -86,8 +90,19 @@ function Section({ title, sites }) {
 }
 
 function App() {
+  const [showLogin, setShowLogin] = useState(false)
+  const account = useAccount()
+
   return (
     <main className="dashboard">
+      <AccountWidget
+        isLoggedIn={account.isLoggedIn}
+        isChecking={account.isChecking}
+        username={account.username}
+        onSignIn={() => setShowLogin(true)}
+        onSignOut={account.logout}
+      />
+
       <header className="dashboard-header">
         <h1>Matthew Bulkley</h1>
         <p>A few of the things I've built.</p>
@@ -95,6 +110,15 @@ function App() {
 
       <Section title="My Websites" sites={WEBSITES} />
       <Section title="Games" sites={GAMES} />
+
+      {showLogin && (
+        <LoginModal
+          onClose={() => setShowLogin(false)}
+          onLoginGuest={account.loginGuest}
+          onRegisterPassword={account.registerPassword}
+          onLoginPassword={account.loginPassword}
+        />
+      )}
     </main>
   )
 }
