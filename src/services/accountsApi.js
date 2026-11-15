@@ -50,3 +50,8 @@ export async function fetchCurrentUser(token) {
   })
   return parseOrThrow(response)
 }
+
+export async function fetchLeaderboard(game, limit = 20) {
+  const response = await fetch(`${BASE_URL}/api/leaderboard/${game}?limit=${limit}`)
+  return parseOrThrow(response)
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import AccountWidget from './components/AccountWidget'
 import LoginModal from './components/LoginModal'
+import LeaderboardsCard from './components/LeaderboardsCard'
 import useAccount from './hooks/useAccount'
 import './App.css'
 
@@ -52,7 +53,7 @@ const GAMES = [
   },
   {
     name: 'Twogether',
-    description: '2-player co-op puzzle platformer - one keyboard, two players.',
+    description: '2-player co-op puzzle game - play together online, from any device.',
     href: 'https://twogether.matthewbulkley.com',
     icon: '🤝',
     accent: '#e63946',
@@ -108,8 +109,9 @@ function App() {
         <p>A few of the things I've built.</p>
       </header>
 
-      <Section title="My Websites" sites={WEBSITES} />
       <Section title="Games" sites={GAMES} />
+      <Section title="My Websites" sites={WEBSITES} />
+      <LeaderboardsCard />
 
       {showLogin && (
         <LoginModal
