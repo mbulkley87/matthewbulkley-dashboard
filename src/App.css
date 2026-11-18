@@ -94,19 +94,29 @@
   color: var(--accent);
 }
 
+/* Deliberately NOT styled like .site-card above (no per-item border/
+   radius/gradient, no hover lift) - one flat panel with hairline dividers
+   between sections, so this reads as a stats readout, not a second row of
+   clickable tiles (a real guest mistook the card-styled version for
+   navigation). */
 .leaderboards-card {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .mini-leaderboard {
   --accent: #5b8def;
   padding: 20px 20px 16px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-leaderboard:first-child {
+  border-left: none;
 }
 
 .mini-leaderboard-header {
