@@ -65,6 +65,13 @@ const GAMES = [
     icon: '🚢',
     accent: '#4fd1c5',
   },
+  {
+    name: 'Split Control',
+    description: '2-player co-op circuit puzzle - you each control half the tiles.',
+    href: 'https://splitcontrol.matthewbulkley.com',
+    icon: '🔌',
+    accent: '#e67e3a',
+  },
 ]
 
 function SiteCard({ site }) {
