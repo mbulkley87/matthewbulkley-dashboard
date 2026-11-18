@@ -5,6 +5,7 @@ const BOARDS = [
   { game: 'herodetails', name: 'Hero Details', icon: '⚔️', accent: '#e8862c' },
   { game: 'cluetations', name: 'ClueTations', icon: '🔎', accent: '#c084fc' },
   { game: 'twogether', name: 'Twogether', icon: '🤝', accent: '#e63946' },
+  { game: 'battleship', name: 'Battleship', icon: '🚢', accent: '#4fd1c5' },
 ]
 
 function MiniLeaderboard({ board }) {

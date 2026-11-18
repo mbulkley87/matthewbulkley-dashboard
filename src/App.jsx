@@ -58,6 +58,13 @@ const GAMES = [
     icon: '🤝',
     accent: '#e63946',
   },
+  {
+    name: 'Battleship',
+    description: '2-player Battleship on a 6x6 grid - Radar Scan and Barrage included.',
+    href: 'https://battleship.matthewbulkley.com',
+    icon: '🚢',
+    accent: '#4fd1c5',
+  },
 ]
 
 function SiteCard({ site }) {
