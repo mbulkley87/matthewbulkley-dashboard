@@ -72,6 +72,13 @@ const GAMES = [
     icon: '🔌',
     accent: '#e67e3a',
   },
+  {
+    name: 'Tower Defense',
+    description: 'Solo roguelite siege - 20 rounds, random Common/Rare/Epic/Legendary tower drops.',
+    href: 'https://towerdefense.matthewbulkley.com',
+    icon: '🏹',
+    accent: '#f59e0b',
+  },
 ]
 
 function SiteCard({ site }) {

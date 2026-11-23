@@ -7,6 +7,7 @@ const BOARDS = [
   { game: 'twogether', name: 'Twogether', icon: '🤝', accent: '#e63946' },
   { game: 'battleship', name: 'Battleship', icon: '🚢', accent: '#4fd1c5' },
   { game: 'splitcontrol', name: 'Split Control', icon: '🔌', accent: '#e67e3a' },
+  { game: 'towerdefense', name: 'Tower Defense', icon: '🏹', accent: '#f59e0b' },
 ]
 
 function MiniLeaderboard({ board }) {
