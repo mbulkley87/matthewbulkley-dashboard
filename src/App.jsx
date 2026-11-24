@@ -79,6 +79,13 @@ const GAMES = [
     icon: '🏹',
     accent: '#f59e0b',
   },
+  {
+    name: 'Blackjack',
+    description: 'Networked casino blackjack - sit at a shared table, bet chips, start at $1000.',
+    href: 'https://blackjack.matthewbulkley.com',
+    icon: '🃏',
+    accent: '#2e7d4f',
+  },
 ]
 
 function SiteCard({ site }) {
