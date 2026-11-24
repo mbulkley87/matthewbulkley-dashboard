@@ -176,6 +176,14 @@
   color: var(--accent);
 }
 
+.mini-leaderboard-positive {
+  color: #7dd88a;
+}
+
+.mini-leaderboard-negative {
+  color: #e08a8a;
+}
+
 /* Account widget + shared-login modal */
 
 .account-widget {
