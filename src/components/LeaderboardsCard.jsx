@@ -52,9 +52,8 @@ function MiniLeaderboard({ board }) {
 // fetched directly from its own API.
 const BLACKJACK_API = 'https://api-blackjack.matthewbulkley.com'
 
-function formatLifetime(amount) {
-  const sign = amount >= 0 ? '+' : '-'
-  return `${sign}$${Math.abs(amount)}`
+function formatBusts(resetCount) {
+  return `${resetCount} time${resetCount === 1 ? '' : 's'} busted`
 }
 
 function MiniBlackjackLeaderboard() {
@@ -86,7 +85,7 @@ function MiniBlackjackLeaderboard() {
               <span className="mini-leaderboard-rank">#{index + 1}</span>
               <span className="mini-leaderboard-name">{entry.username}</span>
               <span className="mini-leaderboard-score">
-                ${entry.balance} <span className={entry.lifetimeEarnings >= 0 ? 'mini-leaderboard-positive' : 'mini-leaderboard-negative'}>({formatLifetime(entry.lifetimeEarnings)})</span>
+                ${entry.balance} <span className="mini-leaderboard-busts">({formatBusts(entry.resetCount)})</span>
               </span>
             </li>
           ))}
